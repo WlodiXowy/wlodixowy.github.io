@@ -1,24 +1,21 @@
 var lecimuzyczka = 0;
-function PlayMusic() {
-    if(lecimuzyczka==0) {
-    var play=document.getElementById("bgMusic");
-        play.play();
-        lecimuzyczka++;
-    } else {
-        return;
-    }
+
     function TwojaStara() {
+        if(lecimuzyczka==0) {
+            var play=document.getElementById("bgMusic");
+            play.play();
+        } else {
+            return;
+        }
         document.getElementById("twojastaratodziwka").style.opacity = "100";
         document.getElementById("twojstarypijerompera").style.opacity = "0";
-        var play=document.getElementById("bgMusic");
-        play.play();
+    
         document.getElementById('twojastaratodziwka').className = 'fadzikszmato';
         document.getElementById('twojstarysiekurwi').className = 'spierdalaj';
 
         document.getElementById('twojstarypijerompera').className = 'spierdalaj';
         container.destroy();
     }
-}
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
