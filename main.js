@@ -1,12 +1,8 @@
 var lecimuzyczka = 0;
 
     function TwojaStara() {
-        if(lecimuzyczka==0) {
-            var play=document.getElementById("bgMusic");
-            play.play();
-        } else {
-            return;
-        }
+        var play=document.getElementById("bgMusic");
+        play.play();
         document.getElementById("twojastaratodziwka").style.opacity = "100";
         document.getElementById("twojstarypijerompera").style.opacity = "0";
     
