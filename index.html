@@ -19,11 +19,10 @@
     
 </head>
 <body>
-    
     <div class="videosplash" id="twojstarysiekurwi twojastarakurwaparticlesy">
     </div>
     <div class="splashcard" style="z-index:5" id="twojstarypijerompera">
-        <button id="przycisk" class="przycisk" onclick=TwojaStara() onclick=TwojaStaraDestroy();>click to enter.</button>
+        <button id="przycisk" class="przycisk" onclick=TwojaStara()>click to enter.</button>
     </div>
     <script type="text/javascript">
         const options = {
@@ -73,7 +72,7 @@
             var button = document.getElementById("przycisk"); 
             button.addEventListener("click", function() { 
                 setTimeout(function () {
-                container.destroy();
+                  container.destroy();
                 }, 3500);
             }); 
         });
