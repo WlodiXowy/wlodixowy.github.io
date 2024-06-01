@@ -1,7 +1,11 @@
+var lecimuzyczka = 0;
 function PlayMusic() {
-
+    if(lecimuzyczka==0) {
     var play=document.getElementById("bgMusic");
         play.play();
+        lecimuzyczka++;
+    } else {
+        return;
     }
     function TwojaStara() {
         document.getElementById("twojastaratodziwka").style.opacity = "100";
@@ -14,7 +18,7 @@ function PlayMusic() {
         document.getElementById('twojstarypijerompera').className = 'spierdalaj';
         container.destroy();
     }
-
+}
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
