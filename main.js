@@ -1,8 +1,13 @@
-var lecimuzyczka = 0;
+let lecimuzyczka = false;
 
     function TwojaStara() {
-        var play=document.getElementById("bgMusic");
-        play.play();
+        if(lecimuzyczka) {
+            return;
+        } else {
+            var play=document.getElementById("bgMusic");
+            play.play();
+            lecimuzyczka = true;
+        }
         document.getElementById("twojastaratodziwka").style.opacity = "100";
         document.getElementById("twojstarypijerompera").style.opacity = "0";
     
