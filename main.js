@@ -1,13 +1,10 @@
+
 let lecimuzyczka = false;
 
     function TwojaStara() {
-        if(lecimuzyczka) {
-            return;
-        } else {
-            var play=document.getElementById("bgMusic");
-            play.play();
-            lecimuzyczka = true;
-        }
+        var play=document.getElementById("bgMusic");
+        play.play();
+        lecimuzyczka = true;
         document.getElementById("twojastaratodziwka").style.opacity = "100";
         document.getElementById("twojstarypijerompera").style.opacity = "0";
     
@@ -16,6 +13,68 @@ let lecimuzyczka = false;
 
         document.getElementById('twojstarypijerompera').className = 'spierdalaj';
         container.destroy();
+    }
+    function wlodixowy() {
+        document.getElementById("twojastaratodziwka").style.opacity = "0";
+        document.getElementById("wlodixowyszef").style.opacity = "100";
+
+        document.getElementById("wlodixowyszef").className = 'fadzikszmato';
+        document.getElementById("twojastaratodziwka").className = 'spierdalaj';
+
+        var play=document.getElementById("bgMusic");
+        play.pause();
+        var muzawlodi=document.getElementById("wlodixowymuzyka");
+        muzawlodi.play();
+        var vid=document.getElementById("videomain");
+        vid.pause();
+        var vidwl=document.getElementById("videowlodi");
+        vidwl.play();
+    }
+    function wojtek() {
+        document.getElementById("twojastaratodziwka").style.opacity = "0";
+        document.getElementById("wojszef").style.opacity = "100";
+
+        document.getElementById("wojszef").className = 'fadzikszmato';
+        document.getElementById("twojastaratodziwka").className = 'spierdalaj';
+
+        var play=document.getElementById("bgMusic");
+        play.pause();
+        var muzawoj=document.getElementById("wojmuzyka");
+        muzawoj.play();
+        var vid=document.getElementById("videomain");
+        vid.pause();
+        var vidwoj=document.getElementById("videowoj");
+        vidwoj.play();
+    }
+    function powrotwoj() {
+        document.getElementById("twojastaratodziwka").style.opacity = "100";
+        document.getElementById("wojszef").style.opacity = "0";
+    
+        document.getElementById("wojszef").className = 'spierdalaj';
+        document.getElementById("twojastaratodziwka").className = 'fadzikszmato';
+        var play=document.getElementById("bgMusic");
+        play.play();
+        var muzawoj=document.getElementById("wojmuzyka");
+        muzawoj.pause();
+        var vid=document.getElementById("videomain");
+        vid.play();
+        var vidwoj=document.getElementById("videowoj");
+        vidwoj.pause();
+    }
+    function powrotwlodi() {
+        document.getElementById("twojastaratodziwka").style.opacity = "100";
+        document.getElementById("wlodixowyszef").style.opacity = "0";
+
+        document.getElementById("wlodixowyszef").className = 'spierdalaj';
+        document.getElementById("twojastaratodziwka").className = 'fadzikszmato';
+        var play=document.getElementById("bgMusic");
+        play.play();
+        var muzawlodi=document.getElementById("wlodixowymuzyka");
+        muzawlodi.pause();
+        var vid=document.getElementById("videomain");
+        vid.play();
+        var vidwl=document.getElementById("videowlodi");
+        vidwl.pause();
     }
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
